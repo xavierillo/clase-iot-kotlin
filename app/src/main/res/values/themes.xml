@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.AppIotAndroidXml" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.AppIotAndroidXml" parent="Base.Theme.AppIotAndroidXml" />
+
+    <style name="Theme.AppIot" parent="Theme.Material3.Light.NoActionBar">
+        <!-- tema normal de la app -->
+    </style>
+
+    <!-- Tema exclusivo para el Splash -->
+    <style name="Theme.AppIot.Splash" parent="Theme.SplashScreen">
+        <!-- Ícono grande del splash (vector/mipmap). Recomendado 288×288 px en xxxhdpi -->
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_logo</item>
+        <!-- Fondo sólido -->
+        <item name="windowSplashScreenBackground">@drawable/splash_background</item>
+        <!-- Mantén coherencia con el tema final -->
+        <item name="postSplashScreenTheme">@style/Theme.AppIot</item>
+    </style>
+</resources>
