@@ -15,6 +15,8 @@
     <style name="Theme.AppIot.Splash" parent="Theme.SplashScreen">
         <!-- Ícono grande del splash (vector/mipmap). Recomendado 288×288 px en xxxhdpi -->
         <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_logo</item>
+<!--        <item name="windowSplashScreenAnimatedIcon">@drawable/news_avd_v02</item>-->
+
         <!-- Fondo sólido -->
         <item name="windowSplashScreenBackground">@drawable/splash_background</item>
         <!-- Mantén coherencia con el tema final -->
