@@ -5,12 +5,13 @@ import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.appiotandroidxml.R
 import com.example.appiotandroidxml.data.AuthRepository
 import com.example.appiotandroidxml.data.remote.RetrofitClient
 import kotlinx.coroutines.*
 import com.example.appiotandroidxml.data.local.Prefs
-import com.google.android.ads.mediationtestsuite.activities.HomeActivity
+import com.example.appiotandroidxml.ui.home.HomeActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -24,6 +25,9 @@ class LoginActivity : AppCompatActivity() {
     private val uiScope = MainScope() // lifecycle-aware simple scope
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        // 1) instala el splash ANTES del super
+        installSplashScreen()
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         prefs = Prefs(this)

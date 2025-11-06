@@ -7,17 +7,20 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
     // Cambia por tu dominio
-    private const val BASE_URL = "http://ec2-98-95-27-212.compute-1.amazonaws.com"
+    private const val BASE_URL = "http://ec2-98-95-27-212.compute-1.amazonaws.com/"
         //"https://TU_API/"
+
+    // Token provider configurable
+    @Volatile private var tokenProvider: (() -> String?) = { null }
+    fun setTokenProvider(provider: () -> String?) { tokenProvider = provider }
 
     private val httpClient by lazy {
         OkHttpClient.Builder()
-            .addInterceptor(AuthInterceptor {
-                // Aquí obtenemos el token desde SharedPreferences
-                // (Solo si lo guardaste en Prefs al hacer login)
-                // Cambia el contexto según tu implementación
-                null  // puedes remplazarlo más adelante por Prefs(context).getToken()
-            })
+            .addInterceptor(AuthInterceptor { tokenProvider() }) // usa SIEMPRE el token más reciente
+            // (Opcional) timeouts y logging en debug
+            // .connectTimeout(15, TimeUnit.SECONDS)
+            // .readTimeout(20, TimeUnit.SECONDS)
+            // .apply { if (BuildConfig.DEBUG) addInterceptor(HttpLoggingInterceptor().apply { level = BODY }) }
             .build()
     }
 

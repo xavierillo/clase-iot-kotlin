@@ -40,7 +40,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -49,7 +48,6 @@ dependencies {
 
     // SplashScreen moderno (Android 12+ con compatibilidad hacia atrás)
     implementation("androidx.core:core-splashscreen:1.2.0")
-
     //retrofit2 es una librería para hacer llamadas HTTP en Android.
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
     //retrofit2 converter es una librería para convertir datos JSON en objetos Kotlin o Java.
@@ -58,7 +56,6 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     //kotlinc-core es una librería para generar código Kotlin en tiempo de ejecución.
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
-    implementation(libs.mediation.test.suite)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

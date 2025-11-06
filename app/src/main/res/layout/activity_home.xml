@@ -10,7 +10,7 @@
         android:layout_width="322dp"
         android:layout_height="50dp"
         android:layout_marginTop="60dp"
-        android:text="Bienvenido"
+        android:text="@string/bienvenido"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,13 +19,39 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
+
     <Button
         android:id="@+id/btnLogout"
         android:layout_width="277dp"
-        android:layout_height="45dp"
-        android:text="Cerrar sesión"
+        android:layout_height="48dp"
+        android:layout_marginBottom="36dp"
+        android:text="@string/cerrar_sesi_n"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.388"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHomeEmail"
+        app:layout_constraintVertical_bias="0.97"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txtHomeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nombre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="156dp" />
+        tools:layout_editor_absoluteY="162dp" />
+
+    <TextView
+        android:id="@+id/txtHomeEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/correo_correo_cl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="223dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

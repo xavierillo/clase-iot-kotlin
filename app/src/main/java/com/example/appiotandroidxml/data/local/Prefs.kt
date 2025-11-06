@@ -8,6 +8,7 @@ class Prefs(ctx: Context) {
         ctx.getSharedPreferences("auth_prefs", Context.MODE_PRIVATE)
 
     fun saveToken(token: String) = sp.edit().putString("jwt", token).apply()
+
     fun getToken(): String? = sp.getString("jwt", null)
     fun clear() = sp.edit().clear().apply()
 }
